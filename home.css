@@ -8,6 +8,8 @@ body{
     box-sizing: border-box;
     text-decoration: none;
 }
+
+/*Aside*/
 .leftAside{
     background-color: #ecd2bc;
     width: 15%;
@@ -25,15 +27,31 @@ body{
     object-fit: contain;
     transition: opacity .15s ease;
 }
-.content h1{
+.insec, .fungi, .amphib{
     font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: 0.2s;
 }
 .item{
-    display: inline-flex;
+    display: flex;
     align-items: center;
     line-height: 1.2;
     text-decoration: none;
-    
+    margin-left: 20px;
+}
+.item:hover{
+    transform: translateX(0.1rem) translateY(0.1rem);
+}
+.fungi:hover{
+    color: #ac3c3c;
+}
+.insec:hover{
+    color: #ac3c3c;
+}
+.amphib:hover{
+    color: #ac3c3c;
 }
 .content{
     justify-content: center;
@@ -56,16 +74,13 @@ body{
     border: 2px dashed #DAA06D;
     height: 100%;
 }
-.cardsMain{
-    padding: 1.25rem 2rem 4rem;
-    width: 70%;
-    margin-left: 20%;
-}
 .sidebarBottom{
     z-index: 999999;
     height: 200px;
     margin-top: -200px;
 }
+
+/*Searchbar*/
 .input{
     border: none;
     color: black;
@@ -91,6 +106,11 @@ body{
 }
 
 /*cards*/
+.cardsMain{
+    padding: 1.25rem 2rem 4rem;
+    width: 70%;
+    margin-left: 20%;
+}
 .containerCards{
     margin-top: 50px;
     display: grid;
@@ -106,7 +126,6 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-
 }
 .card1 img{
     width: 250px;
@@ -139,7 +158,6 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-
 }
 .card3 img{
     width: 250px;
@@ -147,7 +165,7 @@ body{
     margin-top: -15px;
     margin-left: -10px;
 }
-.anfibio{
+.amphibiansBtn{
     outline: none;
     color: #2e5f38;
     padding: 8px;
@@ -159,7 +177,7 @@ body{
     box-shadow: 0 0 0 4px #9bc7a4, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
     transition: .1s ease-in-out;
 }
-.fungo{
+.fungBtn{
     outline: none;
     color: #da6d6d;
     padding: 8px;
@@ -171,7 +189,7 @@ body{
     box-shadow: 0 0 0 4px #eacaca, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
     transition: .1s ease-in-out;
 }
-.insetos{
+.bugsBtn{
     outline: none;
     color: #DAA06D;
     padding: 8px;
@@ -183,12 +201,12 @@ body{
     box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
     transition: .1s ease-in-out;
 }
-.anfibio:hover{
+.amphibiansBtn:hover{
     transform: translateX(0.1rem) translateY(0.1rem);
 }
-.fungo:hover{
+.fungBtn:hover{
     transform: translateX(0.1rem) translateY(0.1rem);
 }
-.insetos:hover{
+.bugsBtn:hover{
     transform: translateX(0.1rem) translateY(0.1rem);
 }
