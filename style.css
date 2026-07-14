@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
 html{
     scroll-behavior: smooth;
     scrollbar-color:#b5855b rgb(234, 221, 202);
@@ -69,6 +70,7 @@ header{
     font-weight: 600;
     margin-right: 40px;
     margin-left: 20px;
+    font-family: "Spirax", system-ui;
 }
 .imgAbove{
     height: 40px;
@@ -96,7 +98,10 @@ header{
     margin: 0 auto 40px auto;
 }
 .textInfo span{
-    display: block;
+    font-family: "Spirax", system-ui;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
     margin-bottom: 15px;
     font-size: 40px;
 }
@@ -147,6 +152,9 @@ header{
 .flipCardBack p{
     padding-left: 20px;
 }
+.flipCardBack h1{
+    font-family: "Spirax", system-ui;
+}
 .tooltip{
     position:relative;
     display:inline-block;
@@ -192,6 +200,9 @@ header{
 .leftSide{
     flex: 1;
     max-width: 600px;
+}
+.leftSide h1{
+    font-family: "Spirax", system-ui;
 }
 
 
