@@ -23,7 +23,7 @@ header{
     backdrop-filter: blur(30px); 
 }
 .logo{
-    height: 40px;
+    height: 60px;
 }
 .btnHeader{
     outline: none;
@@ -47,16 +47,33 @@ header{
 .imgCircles{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+.imgContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 .img{
-    height: 400px;
-    width: 500px;
-    margin-top: 10px;
+    height: auto;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 .imgB{
+    position: absolute;
     height: 30px;
-    margin-bottom: -20px;
-    margin-left: -30px;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+.imgA:hover{
+    animation: chacoalhar 1.7s ease-in-out infinite;
 }
 .imgB:hover{
     animation: chacoalhar 1.7s ease-in-out infinite;
@@ -71,19 +88,22 @@ header{
 }
 
 .imgA{
+    position: absolute;
     height: 50px;
-    margin-bottom: 360px;
-    margin-left: -50px;
+    top: 10px;
+    right: 10px;
 }
 .circlesOptions{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
 }
 .circlesOptions img{
     height: 50px;
     width: 50px;
-    margin: 10px;
-    margin-right: 20px;
+    margin: 8px;
+    object-fit: cover;
     border-radius: 100px;
     border: 2px dashed #b37b4b;
 }
@@ -92,13 +112,24 @@ header{
 }
 .containerMain{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin: 100px 20px 40px 20px;
     display: flex;
-    gap: 100px;
+    padding: 20px;
+    gap: 40px;
     background-color: #e7a66d;
     border: 2px dashed #b37b4b;
+}
+@media (min-width: 768px) {
+    .containerMain {
+        flex-direction: row;
+        gap: 80px;
+        margin: 120px auto 40px auto;
+        max-width: 1100px;
+        padding: 40px;
+    }
 }
 .dropdown-content {
   display: none;
@@ -114,37 +145,92 @@ header{
   display: block;
 }
 .textDrop{
+    position: relative;
     background-color: #b37b4b;
-    width: 400px;
-    height: 80px;
+    width: 100%;
+    padding: 10px 20px;
     border: 2px dashed #DAA06D;
 }
 .textDrop h1{
-    margin-left: 50px;
+    margin: 0;
+    font-size: 1.25rem;
+    color: #fff;
 }
 .dropdown{
     display: flex;
     flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
 }
 .title{
     margin-bottom: 100px;
 }
-
-
-
-.gallery{
-    display: flex;
-    margin-left: 30px;
+.nameMain {
+    margin-bottom: 10px;
+    text-align: center;
 }
-.galleryContainer h1{
-    margin-left: 50px;
-    margin-bottom: 30px;
+
+@media (min-width: 768px) {
+    .nameMain {
+        text-align: left;
+    }
+}
+
+.textAbout {
+    margin: 40px 20px;
+}
+
+@media (min-width: 768px) {
+    .textAbout {
+        max-width: 1100px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+}
+
+.textAbout h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.galleryContainer {
+    margin: 40px 20px;
+}
+
+@media (min-width: 768px) {
+    .galleryContainer {
+        max-width: 1100px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+}
+
+.galleryContainer h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+}
+.gallery div {
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 .img1 img{
     height: 180px;
 }
 .img1{
-    background-color: #e7a66d;
+    background-color: #e1b58d;
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
@@ -159,7 +245,7 @@ header{
     height: 180px;
 }
 .img2{
-    background-color: #2874c1;
+    background-color: #5a81a8;
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
@@ -173,7 +259,7 @@ header{
     height: 180px;
 }
 .img3{
-    background-color: #e76ddf;
+    background-color: #e08bda;
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
@@ -187,7 +273,7 @@ header{
     height: 180px;
 }
 .img4{
-    background-color: #6f6de7;
+    background-color: #7a78d7;
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
@@ -202,7 +288,7 @@ header{
     height: 180px;
 }
 .img5{
-    background-color: #90e76d;
+    background-color: #7bb365;
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
@@ -227,21 +313,28 @@ header{
     transform: scale(1.4); ;
 }
 
-.gridContainer{
+.gridContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 70px;
-    margin-right: 50px;
-    margin-bottom: 70px;
+    grid-template-columns: 1fr;
+    gap: 30px;
 }
-.textAbout{
-    margin-top: 70px;
-    margin-left: 50px;
+
+@media (min-width: 768px) {
+    .gridContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.gridContainer p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #444;
+    margin: 0;
 }
 
 /*footer*/
 .footer{
-    background-color: rgb(114, 114, 114);
+    background-color: rgb(50, 29, 24);
     bottom: 0;
     margin-top: 40px;
 }
