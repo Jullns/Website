@@ -18,13 +18,17 @@ header{
     width: 100%;
     height: 60px;
     background-color: transparent;
-    z-index: 9999;
+
     padding: 35px 42px;
     box-sizing: border-box;
     align-items: center;
+    z-index: 10000; 
+    margin-bottom: -60px;
 }
 .logo{
-    height: 40px;
+    background-color: rgb(197, 231, 162);
+    height: 60px;
+    border-radius: 50px;
 }
 .btnHeader{
     outline: none;
@@ -53,13 +57,12 @@ header{
     top: 0;      
 }
 .imgHero{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 500px;
-    padding-top: 70px;
-    margin-left: 300px;
+    width: 600px;
+    margin-left: auto;
+}
+.imgHero img{
+    max-width: 100%;
 }
 .aboveInfo{
     display: flex;
@@ -97,6 +100,9 @@ header{
     max-width: 800px;
     margin: 0 auto 40px auto;
 }
+.textInfo p{
+    color: #35200d;
+}
 .textInfo span{
     font-family: "Spirax", system-ui;
     display: flex;
@@ -104,6 +110,7 @@ header{
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: 40px;
+    color: rgb(68, 105, 39);
 }
 .flipImages{
     display: flex;
@@ -148,12 +155,15 @@ header{
     justify-content: center;
     background-color: #DAA06D;
     transform: rotateY(180deg);
+    padding-right: 15px;
 }
 .flipCardBack p{
     padding-left: 20px;
+    color: #35200d;
 }
 .flipCardBack h1{
     font-family: "Spirax", system-ui;
+    color: rgb(68, 105, 39);
 }
 .tooltip{
     position:relative;
@@ -203,8 +213,11 @@ header{
 }
 .leftSide h1{
     font-family: "Spirax", system-ui;
+    color: rgb(68, 105, 39);
 }
-
+.leftSide p{
+    color: #35200d;
+}
 
 .imgContainer img{
     background-image: url('https://i.pinimg.com/736x/b4/34/05/b43405a6c6531537ccabb3a57415e69e.jpg');
@@ -281,7 +294,7 @@ header{
 
 /*footer*/
 .footer{
-    background-color: rgb(114, 114, 114);
+    background-color: rgb(65, 65, 65);
     bottom: 0;
 }
 .imgFooterBackround img{
@@ -307,6 +320,10 @@ header{
 @media (max-width: 768px){
     header{
         padding: 15px 20px;
+    }
+    .imgHero {
+        max-width: 320px; 
+        margin: 0 auto;   
     }
     .hero{
         min-height: 350px;
