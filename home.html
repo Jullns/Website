@@ -45,23 +45,23 @@
             </form>
             <div class="containerCards">
                 <div class="card1 cardItem" data-category="amphibians">
-                    <img src="/img/clip.png" alt="">
-                    <h1>Lady Bug</h1>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4iRVi83eMPEEp6qW6ABsZSTDUVIH0RdV8EbfCuzf63D9L04d49b-9_4Y&s=10" alt="">
+                    <h1>Axolotl</h1>
                     <a href="pages/anfi1.html"><button class="amphibiansBtn">Get to know</button></a>
                 </div>
                 <div class="card1 cardItem" data-category="amphibians">
-                    <img src="/img/clip.png" alt="">
-                    <h1>Lady Bug</h1>
+                    <img src="https://reptichip.com/cdn/shop/articles/Best_Substrate_for_a_Fire_salamander_Salamandra_salamandra_ReptiChip_4b4db110-6c22-4636-ba46-1f51c4403b99_600x.png?v=1755722404" alt="">
+                    <h1>Fire Salamander</h1>
                     <a href="pages/anfi2.html"><button class="amphibiansBtn">Get to know</button></a>
                 </div>
                 <div class="card1 cardItem" data-category="amphibians">
-                    <img src="/img/clip.png" alt="">
-                    <h1>Lady Bug</h1>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Agalychnis_callidryas.jpg" alt="">
+                    <h1>Red-Eyed Frog</h1>
                     <a href="pages/anfi3.html"><button class="amphibiansBtn">Get to know</button></a>
                 </div>
                 <div class="card1 cardItem" data-category="amphibians">
-                    <img src="/img/clip.png" alt="">
-                    <h1>Lady Bug</h1>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcgFvt_3I_F5tQfAS-waDPeZEHaptv47ZnrBu9thtscP453H5Vra-VCno&s=10" alt="">
+                    <h1>Cururu toad</h1>
                     <a href="pages/anfi4.html"><button class="amphibiansBtn">Get to know</button></a>
                 </div>
                 <div class="card2 cardItem" data-category="fungi">
@@ -80,8 +80,8 @@
                     <a href="pages/fungi3.html"><button class="fungBtn">Get to know</button></a>
                 </div>
                 <div class="card2 cardItem" data-category="fungi">
-                    <img src="/img/clip.png" alt="">
-                    <h1>Lady Bug</h1>
+                    <img src="https://i.pinimg.com/736x/40/94/76/40947610624bbc19be8af1050a38c9c1.jpg" alt="">
+                    <h1>Shimeji</h1>
                     <a href="pages/fungi4.html"><button class="fungBtn">Get to know</button></a>
                 </div>
                 <div class="card3 cardItem" data-category="bugs">
@@ -108,7 +108,38 @@
         </section>
     </main>
 <script>
-    
+    const srchBar = document.getElementById('searchbar');
+    const filtButtons = document.querySelectorAll('.filtBtn');
+    const alCards = document.querySelectorAll('.cardItem');
+
+    let selectedCategory = 'all';
+
+    function applyFilter() {
+        const srchText = srchBar.value.toLowerCase();
+
+        alCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            const cardTitle = card.querySelector('h1').textContent.toLowerCase();
+
+            const categoryMatch = (selectedCategory === 'all' || cardCategory === selectedCategory);
+            const searchMatch = cardTitle.includes(srchText);
+
+            if (categoryMatch && searchMatch) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    srchBar.addEventListener('input', applyFilter);
+
+    filtButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            selectedCategory = button.getAttribute('data-filter');
+            applyFilter();
+        });
+    });
 </script>
 </body>
 </html>
