@@ -221,46 +221,35 @@ header{
 }
 
 .imgContainer img{
-    background-image: url('https://i.pinimg.com/736x/b4/34/05/b43405a6c6531537ccabb3a57415e69e.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 550px;
+    height: 650px;
     width: 100%;  
 }
 .containerAbout1{
     position: relative;
 }
-.imgContainer1, .imgContainer2, .imgContainer3, .imgContainer4 {
+.imgContainer1, .imgContainer2, .imgContainer3 {
     position: absolute;
     z-index: 990;
 }
 .imgContainer1{
-    top: 18%;
-    left: 15%;
+    bottom: 40%;
+    left: 5%;
 }
-.imgContainer1 img{
+.imgC1{
     height: 100px;
 }
 .imgContainer2 {
-    top: 25%;
+    top: 35%;
     left: 58%;
 }
-.imgContainer2 img{
+.imgC2{
     height: 100px;
 }
 .imgContainer3 {
-    top: 35%;
-    left: 60%;
+    top: 50%;
+    left: 55%;
 }
-.imgContainer3 img{
-    height: 100px;
-}
-.imgContainer4 {
-    top: 45%;
-    left: 30%;
-}
-.imgContainer4 img{
+.imgC3{
     height: 100px;
 }
 .list{
@@ -340,8 +329,16 @@ header{
         flex-direction: column;
         gap: 30px
     }
-    .imgContainer1 img, .imgContainer2 img, .imgContainer3 img, .imgContainer4 img{
+    .imgC1, .imgC2, .imgC3{
         height: 50px;
+    }
+    .imgContainer1{
+        bottom: 50%;
+        left: 5%;
+    }
+    .imgContainer3 {
+        top: 43%;
+        left: 50%;
     }
     .flipCard{
         max-width: 320px;
