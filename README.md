@@ -1,4 +1,7 @@
 # Tiny Forest
-<img width="1000" height="500" alt="logoBig" src="https://github.com/user-attachments/assets/4027ae80-6dc0-439c-bc7a-0d9cdd1fc3ed" />
+<img width="500" height="500" alt="Logo" src="https://github.com/user-attachments/assets/f95ccb56-3797-4078-a721-af484582b1f3" />
 
 A web wiki dedicated to cataloging and exploring the ecosystem of amphibians, fungi, and insects.
+
+# Try it!
+https://jullns.github.io/WebsiteTinyForest/
