@@ -8,6 +8,17 @@ A web wiki dedicated to cataloging and exploring the world's incredible diversit
 
 This color palette was developed based on the ecosystem of these small animals. The site adopts a cottagecore aesthetic, which reinforces the project’s proposal to bring nature closer to the reader through earthy tones that refer to trees, in addition to the green of leaves and amphibians.
 
+# Setup & Installation
+Clone the repository to your computer:
+
+`git clone https://github.com/Jullns/WebsiteTinyForest.git`
+
+Navigate to the project directory:
+* cd WebsiteTinyForest
+
+Open the main file:
+* Open the project folder in your code editor (such as VS Code) and run the Live Server extension, or open the index.html file directly in your preferred browser.
+
 # Try it!
 https://jullns.github.io/WebsiteTinyForest/
 
